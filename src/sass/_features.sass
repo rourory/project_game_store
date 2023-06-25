@@ -1,0 +1,32 @@
+.features
+   background-color: $color-gray-light
+   grid-row: 3 / 4
+   grid-column: center-start / center-end
+   @include respond(tab-port)
+      grid-row: 4 / 5
+   
+
+   display: grid
+   padding: 15rem 0
+   grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr))
+   grid-auto-rows: min-content min-content
+   row-gap: 3rem
+   column-gap: 4rem
+
+.feature
+   display: grid
+   grid-template-columns: min-content 1fr
+   grid-template-rows: min-content 1fr
+   gap: 2.5rem 1.5rem
+
+   &__text
+      font-size: 1.6rem
+      font-weight: 400
+      line-weight: 113%
+      color: $color-green-dark
+
+   &__icon
+      width: 4.5rem
+      height: 4.5rem
+      grid-row: 1 / -1
+      transform: translateY(-1rem)

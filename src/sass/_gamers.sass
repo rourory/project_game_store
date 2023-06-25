@@ -1,0 +1,28 @@
+.gamers
+   background-color: $color-blue-dark
+   grid-column: col-start 7 / full-end
+   justify-content: center
+   align-content: center
+   @include respond(tab-port)
+      grid-column: 1 / -1
+      padding-top: 8rem
+      padding-bottom: 8rem
+
+   display: grid
+   gap: 4rem 2rem
+   grid-template-columns: min-content max-content
+
+   &__title
+      grid-column: 1 / -1
+      justify-self: center
+
+   &__img
+      width: 9rem
+
+   &__text
+      align-self: center
+
+   &__score
+      font-size: 1.6rem
+      color: $color-gray-dark
+      font-weight: 300

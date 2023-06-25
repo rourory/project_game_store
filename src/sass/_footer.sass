@@ -1,0 +1,56 @@
+.footer
+   background-color: $color-blue-dark
+   grid-column: 2 / -1
+   padding: 4rem
+   border-top: solid 3px $color-gray-light
+
+   
+   @include respond(phone)
+      height: 100vh
+
+   &__logo
+      display: block
+      margin: 0 auto
+      width: 15vw
+      margin-bottom: 8rem
+      padding-top: 8rem
+      @include respond(phone)
+         margin-bottom: 10rem
+         padding-top: 4rem
+         width: 35vw
+   
+   @include respond(tab-land)
+      grid-column: 1 / -1
+
+   
+.nav
+   display: grid
+   grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr))
+   justify-items: center
+   gap: 6rem 3.5rem
+   margin-bottom: 10rem
+
+   @include respond(tab-land)
+      grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr))
+      gap: 5rem 2rem
+      
+
+   &__item
+      &:link, &:visited
+         text-decoration: none
+         text-align: center
+         color: $color-gray-light
+         text-transform: uppercase
+         font-size: 2.6rem
+         transition: all 200ms ease-out
+
+         @include respond(tab-land)
+            font-size: 2rem
+         @include respond(phone)
+            font-size: 3rem
+
+      &:hover, &:active
+         scale: 1.2
+         color: $color-green-dark
+
+   
